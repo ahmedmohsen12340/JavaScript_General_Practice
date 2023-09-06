@@ -7,7 +7,7 @@ let OpeningTime = new Date("11-5-2023").getTime();
 let x =setInterval(()=>{
     let now = new Date().getTime();
     let Difference = OpeningTime -now;
-    secs.innerHTML = Math.floor(Difference/1000%(60));
+    secs.innerHTML = Math.floor(Difference%(1000*60)/1000);
     minutes.innerHTML = Math.floor(Difference%(1000*60*60)/1000/60);
     hours.innerHTML = Math.floor(Difference%(1000*60*60*24)/1000/60/60);
     days.innerHTML = Math.floor(Difference/1000/60/60/24);
